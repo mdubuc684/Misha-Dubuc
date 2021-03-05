@@ -1,0 +1,422 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Poppins';
+}
+
+/********************************************************************************* 
+* NAVIGATION BAR
+*********************************************************************************/
+
+.navbar {
+	background-color: #F24D5A;
+	font-size: 15px;
+	max-width: 100%;
+	padding-bottom: 10px;
+	position: fixed;
+	width: 100vw;
+	z-index: 2
+}
+
+/* Navigation side bar (gray). */
+.main-nav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	background-color: #BCBCBC; 
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 0;
+	list-style-type: none;
+}
+
+.main-nav a {
+	text-decoration: none;
+	font-size: 17px;
+	color: #FFFFFF;
+	display: block;
+	transition: 0.3;
+	text-align: left;
+	padding-left: 30px;
+	padding-top: 20px;
+}
+
+.main-nav .closebtn {
+	position: absolute;
+	padding-top: 0;
+	right: 20px;
+	font-size: 35px;
+}
+
+.nav-links, 
+.logo {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.nav-list {
+	margin-top: 52px;
+}
+
+.nav-links {
+	position: left;
+	padding: 20px;
+}
+
+.nav-links:hover {
+	background-color: #ADADAD;
+}
+
+.logo {
+	display: inline-block;
+	font-size: 22px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+.navbar-toggle {
+	position: absolute;
+	cursor: pointer;
+	right: 0px;
+	color: #FFFFFF;
+	font-size: 22px;
+	padding: 10px 20px;
+}
+
+.active {
+	display: block;
+}
+
+.navbar-toggle:hover {
+	background-color: #FA5F6B;
+}
+
+.disable-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
+}
+
+/********************************************************************************* 
+* ANCHOR
+*********************************************************************************/
+.anchor {
+	padding-top: 8vh;
+	margin-top: -8vh;
+}
+
+/********************************************************************************* 
+* FRONT PAGE
+*********************************************************************************/
+
+/* Background layer */
+.frontpagebg {
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("MD_Landscape.jpg") center center fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	max-width: 100%;
+	position: relative;
+	width: 100vw;
+	z-index: 0;
+}
+
+/* Layer that contains all content. */
+.frontpage {
+	background: transparent;
+	height: 100vh;
+	width: 100vw;
+	padding-top: 33vh;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	color: #FFFFFF;
+	overflow: hidden;
+	-webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 4s; /* Firefox < 16 */
+    -ms-animation: fadein 4s; /* Internet Explorer */
+    -o-animation: fadein 4s; /* Opera < 12.1 */
+    animation: fadein 4s;
+	position: relative;
+	z-index: 1;
+}
+
+h1 {
+	font-size: 90px;
+	margin-bottom: 2.5vh;
+}
+
+h1:after {
+	content: '';
+	display: block;
+	border: 2px solid white;
+	margin: auto;
+	width: 60vw;
+}
+
+h2 {
+	font-size: 35px;
+	margin-top: 2.5vh;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/********************************************************************************* 
+* ABOUT ME 
+*********************************************************************************/
+
+.about_me {
+	background-color: #242424;
+	color: #FFFFFF;
+	display: flex;
+	max-width: 100%;
+	overflow: auto;
+	padding-bottom: 5vh;
+	padding-top: 3vh;
+	position: relative;
+	vertical-align: bottom;
+	width: 100%;
+}
+
+	.about_text {
+		flex: 1;
+		float: left;
+		width: 50%;
+	}
+	
+		.about_header {
+			align-items: center;
+			display: flex;
+			font-size: 45px;
+			margin-left: 7%;
+			overflow: auto;
+		}
+		
+		.about_desc {
+			align-items: center;
+			display: flex;
+			margin-left: 7%;
+			margin-top: 1.5vh;
+			overflow: auto;
+		}
+		
+			p {
+				font-size: 16px;
+			}
+			
+
+	.about_pic {
+		flex: 1;
+		align-items: center;
+		display: flex;
+		float: right;
+		justify-content: center;
+		width: 50%;
+	}
+
+			img[title="avatar"] {
+				border: 1vh solid #F24D5A;
+				border-radius: 50%;
+				height: 400px;
+				width: 400px;
+			}
+
+/********************************************************************************* 
+* PROJECTS
+*********************************************************************************/
+
+.projects {
+	background-color: #D4D4D4;
+	color: #000000;
+	display: inline-block;
+	max-width: 100%;
+	overflow: auto;
+	padding-bottom: 5vh;
+	padding-top: 3vh;
+	position: relative;
+	vertical-align: bottom;
+	width: 100vw;
+}
+
+	.projects_header {
+		align-items: center;
+		display: flex;
+		font-size: 45px;
+		padding-left: 3.5%;
+		overflow: auto;
+		width: 100%;
+	}
+
+	.descriptions {
+		display: flex;
+		overflow: auto;
+		margin-top: 1.5vh;
+		padding-bottom: 1%;
+		width: 100%;
+	}
+		.analytics_desc {
+			flex: 1;
+			margin-left: 3.5%;
+			margin-right: 1.75%;
+			overflow: auto;
+			width: 50%;
+		}
+		
+		.recommender_desc {
+			flex: 1;
+			margin-left: 1.75%;
+			margin-right: 3.5%;
+			overflow: auto;
+			width: 50%;
+		}
+		
+	.previews {
+		display: flex;
+		overflow: auto;
+		margin-top: 1.5vh;
+		width: 100%;
+	}
+	
+		.analytics_pic {
+			align-items: top;
+			display: flex;
+			flex: 1;
+			justify-content: center;
+			width: 50%;
+		}
+		
+			img[title="infographic"] {
+				border: 0.5vh solid #F24D5A;
+				height: 220px;
+				width: 520px;
+			}
+		
+		.recommender_pic {
+			align-items: top;
+			display: flex;
+			flex: 1;
+			justify-content: center;
+			width: 50%;
+		}
+		
+			img[title="movielens"] {
+				border: 0.5vh solid #F24D5A;
+				height: 220px;
+				width: 520px;
+			}
+			
+	.senior_design {
+		margin-left: 12.5%;
+		margin-right: 12.5%;
+		margin-top: 4vh;
+		overflow: auto;
+		text-align: center;
+		width: 75%;
+	}
+	
+		p.solid {
+			background-color: #C1C1C1;
+			border-style: solid;
+			font-size: 14px;
+			margin-left: 20%;
+			margin-right: 20%;
+			padding: 10px;
+		}	
+
+/********************************************************************************* 
+* CONTACT
+*********************************************************************************/
+
+.contact {
+	align-items: center;
+	background: linear-gradient(rgba(0, 0, 0, 1.00), rgba(0, 0, 0, 0.6)), url("MD_Landscape.jpg") center center fixed;
+	color: #FFFFFF;
+	display: inline-block;
+	justify-content: center;
+	max-width: 100%;
+	overflow: auto;
+	padding-bottom: 2vh;
+	padding-top: 2vh;
+	position: relative;
+	vertical-align: bottom;
+	width: 100%;
+}
+
+	.contact_header {
+		align-items: center;
+		display: flex;
+		font-size: 40px;
+		justify-content: center;
+	}
+	
+	.contact_choices {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		margin-top: 1vh;
+		margin-left: 5%;
+		margin-right: 5%;
+		overflow: auto;
+		width: 90%;
+	}
+	
+		.email {
+			flex: 1;
+			margin: auto;
+			overflow: auto;
+			text-align: center;
+			width: 33.33%;
+		}
+		
+		.phone {
+			flex: 1;
+			margin: auto;
+			overflow: auto;
+			text-align: center;
+			width: 33.33%;
+		}
+		
+		.linkedin {
+			flex: 1;
+			margin: auto;
+			overflow: auto;
+			text-align: center;
+			width: 33.33%;
+		}

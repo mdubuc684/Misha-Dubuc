@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Misha Dubuc</title>
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="MD_CSS.css">
+		<link rel="icon" type="image/jpg" href="/images/MD_Headshot.jpg"/>
+	</head>
+	
+
+	<body>
+		<nav class="navbar">
+			<span class="navbar-toggle" id="js-navbar-toggle" onclick="openNav()">
+				<i class="fa fa-bars"></i>
+			</span>
+	
+			<a href="#" class="logo">Misha Dubuc</a>
+			
+			<div class="main-nav" id="js-menu">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+					&times;
+				</a>
+				
+				<ul class="nav-list">
+					<li>
+						<a href="#home" class="nav-links">Home</a>
+					</li>
+					<li>
+						<a href="#about_me" class="nav-links">About Me</a>
+					</li>
+					<li>
+						<a href="#projects" class="nav-links">Projects</a>
+					</li>
+					<li>
+						<a href="#contact" class="nav-links">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	
+		<div id="home" class="frontpagebg">
+			<div class="frontpage">
+				<div class="title-cell">
+					<h1>Misha Dubuc</h1>
+					<h2>Data scientist • Music geek • Fervent learner</h2>
+				</div>
+			</div>
+		</div>
+		
+		<div id="about_me" class="anchor">
+			<div class="about_me">
+				<div class="about_text">
+					<div class="about_header">
+						<h3>About Me</h3>
+					</div>
+				
+					<div class="about_desc">
+						<p>Hey! I'm Misha, a senior at Roger Williams University studying Computer Science and Mathematics, with a minor in Business Analytics. I've found my passion in Data Science, where I can use my programming skills to extract stories and predictions from seas of messy information. I've interned at the energy management firm Best Practice Energy, which I've helped automate their process for collecting data on peak electricity usage and commodity futures strips. I also work in my campus' Office of Institutional Research, and am the President of the Analytics Club. My main languages are Python, Java, and Octave, though I've also been exposed to SQL and HTML/CSS.
+						<br>
+						<br>
+						Regarding my personal life, I was born in the coastal city of Zushi, Japan before moving to Bristol, Rhode Island at the age of two. When I'm not busy studying, you'll likely find me practicing the piano/guitar/bass, listening to my favorite artists (The Beach Boys, Animal Collective, The Smiths, etc.), or geeking over shows like <i>Neon Genesis Evangelion</i> and <i>Twin Peaks</i>.
+						<br>
+						<br>
+						You can find relevant details in my resume <a href="MD_Resume.pdf" style="color:#FFFFFF" target="_blank">here</a>.</p>
+					</div>
+				</div>
+				
+				<div class="about_pic">
+					<img title="avatar" src="MD_Headshot.jpg">
+				</div>
+			</div>
+		</div>
+		
+		<div id="projects" class="anchor">
+			<div class="projects">
+				<div class="projects_header">
+					<h4>Projects</h4>
+				</div>
+				
+				<div class="descriptions">
+					<div class="analytics_desc">
+						<p> For the <b>2020 Scholastic Analytics Challenge</b>, hosted by the Association for Information Systems (AIS), my team analyzed 	2,000,000 children's book orders to (1) find demographic trends in sales and (2) create a new strategy to help Scholastic reach all children, regardless of demographic. We used Python to clean the data of duplicate book titles that were inconsistently spelled, and Tableau to visualize the data. Out of 60 schools in the challenge, our presentation <i>won 1st place</i> in the Analysis category. You can read our infographic <a href="MD_Infographic.pdf" style="color:#000000" target="_blank">here</a>.
+						</p>
+					</div>
+					
+					<div class="recommender_desc">
+						<p> A favorite project from my Machine Learning class was programming two <b>movie recommenders</b>. The first implements a <i>content-based</i> system: the user selects a movie, and is then returned similar movies based on shared tags (e.g., <i>Toy Story</i> and <i>Shrek</i> might share 'fantasy'). The second implements a <i>collaborative-filtering</i> system: User A rates several films of their choosing, is matched with a User B with the most similar rating behavior, and is then returned films highly-rated by B that A did not rate. You can watch a demonstration here.
+						</p>
+					</div>
+					
+				</div>
+				
+				<div class="previews">
+					<div class="analytics_pic">
+						<img title="infographic" src="MD_Infographic.png">
+					</div>
+					
+					<div class="recommender_pic">
+						<img title="movielens" src="MD_MovieLens.png">
+					</div>
+				</div>
+					
+				<div class="senior_design">
+					<p>Two fellow classmates and I are currently developing our Senior Design project: <b>NiCoMi Analytics</b>. Our mission statement:</p>
+					<br>
+					<p class="solid">Intended for academic use, NiCoMi Analytics will collect data from supported marketing services to generate dashboards that measure the success of clients' online marketing campaigns. These services range from social media to website trackers to ad clients. We plan for a customizable experience, with users being able to choose the metrics included in their dashboards and stylize as needed. Ultimately, NiCoMi Analytics will allow Digital Marketing students to grow in their consultation skills, and local business in their online presence.</p>
+					<br>
+					<p><b>Updates are to come.</b></p>
+				</div>
+			</div>
+		</div>
+		
+		<div id="contact" class="contact">
+			<div class="contact_header">
+				<h5>Contact</h5>
+			</div>
+			
+			<div class="contact_choices">
+				<div class="email">
+					<a style="color: #FFFFFF" href="mailto:mdubuc684@g.rwu.edu">
+						<i style="font-size: 40px" class="fa fa-envelope"></i>
+					</a>
+					
+					<p style="font-size: 12px">mdubuc684@g.rwu.edu</p>
+				</div>
+				
+				<div class="phone">
+					<i style="font-size: 40px" class="fa fa-phone"></i>
+					
+					<p style="font-size: 12px">(401) 477-3528</p>
+				</div>
+				
+				<div class="linkedin">
+					<a style="color: #FFFFFF" target="_blank" href="https://www.linkedin.com/in/misha-dubuc-866196193">
+						<i style="font-size: 40px" class="fa fa-linkedin-square"></i>
+					</a>
+					
+					<p style="font-size: 12px">LinkedIn</p>
+				</div>
+			</div>
+		</div>
+	
+		<script>
+			function openNav() {
+				document.getElementById("js-menu").style.width = "250px";
+			}
+
+			function closeNav() {
+				document.getElementById("js-menu").style.width = "0";
+			}
+		</script>
+	</body>
+</html>
