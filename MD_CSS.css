@@ -8,11 +8,14 @@ body {
 	font-family: 'Poppins';
 }
 
+html {
+	scroll-padding-top: 8vh;
+}
+
 /********************************************************************************* 
 * NAVIGATION BAR
 *********************************************************************************/
-
-.navbar {
+.top-ribbon {
 	background-color: #F24D5A;
 	font-size: 15px;
 	max-width: 100%;
@@ -22,72 +25,71 @@ body {
 	z-index: 2
 }
 
-/* Navigation side bar (gray). */
-.main-nav {
-	height: 100%;
-	width: 0;
-	position: fixed;
-	z-index: 2;
-	top: 0;
-	right: 0;
+.side-nav {
 	background-color: #BCBCBC; 
-	overflow-x: hidden;
-	transition: 0.5s;
-	padding-top: 0;
+	height: 100%;
 	list-style-type: none;
+	overflow-x: hidden;
+	padding-top: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: 0.5s;
+	width: 0;
+	z-index: 2;
 }
 
-.main-nav a {
-	text-decoration: none;
-	font-size: 17px;
+.side-nav a {
 	color: #FFFFFF;
 	display: block;
-	transition: 0.3;
-	text-align: left;
+	font-size: 17px;
 	padding-left: 30px;
 	padding-top: 20px;
-}
-
-.main-nav .closebtn {
-	position: absolute;
-	padding-top: 0;
-	right: 20px;
-	font-size: 35px;
-}
-
-.nav-links, 
-.logo {
+	text-align: left;
 	text-decoration: none;
+	transition: 0.3;
+}
+
+.side-nav .closebtn {
+	font-size: 35px;
+	padding-top: 0;
+	position: absolute;
+	right: 20px;
+}
+
+.nav-link, 
+.logo {
 	color: #FFFFFF;
+	text-decoration: none;
 }
 
 .nav-list {
 	margin-top: 52px;
 }
 
-.nav-links {
-	position: left;
+.nav-link {
 	padding: 20px;
+	position: left;
 }
 
-.nav-links:hover {
+.nav-link:hover {
 	background-color: #ADADAD;
 }
 
 .logo {
 	display: inline-block;
 	font-size: 22px;
-	margin-top: 10px;
 	margin-left: 20px;
+	margin-top: 10px;
 }
 
 .navbar-toggle {
-	position: absolute;
-	cursor: pointer;
-	right: 0px;
 	color: #FFFFFF;
+	cursor: pointer;
 	font-size: 22px;
 	padding: 10px 20px;
+	position: absolute;
+	right: 0px;
 }
 
 .active {
@@ -99,32 +101,32 @@ body {
 }
 
 .disable-select {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none; 
-  -ms-user-select: none; 
-  user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none; 
+  	-ms-user-select: none; 
+  	-webkit-touch-callout: none;
+  	-webkit-user-select: none;
+  	user-select: none;
 }
 
 /********************************************************************************* 
 * ANCHOR
 *********************************************************************************/
 .anchor {
-	padding-top: 8vh;
-	margin-top: -8vh;
+	scroll-padding-top: -8vh;
+	scroll-margin-top: 8vh;
 }
-
 /********************************************************************************* 
 * FRONT PAGE
 *********************************************************************************/
 
 /* Background layer */
-.frontpagebg {
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("MD_Landscape.jpg") center center fixed;
+#fp-background {
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("images/MD_Landscape.jpg") center center fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
+	height: 100vh;
 	max-width: 100%;
 	position: relative;
 	width: 100vw;
@@ -132,14 +134,14 @@ body {
 }
 
 /* Layer that contains all content. */
-.frontpage {
+#fp-div {
 	background: transparent;
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
 	padding-top: 33vh;
 	display: inline-block;
 	text-align: center;
-	vertical-align: middle;
+	vertical-align: center;
 	color: #FFFFFF;
 	overflow: hidden;
 	-webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
@@ -202,7 +204,7 @@ h2 {
 * ABOUT ME 
 *********************************************************************************/
 
-.about_me {
+#about_me {
 	background-color: #242424;
 	color: #FFFFFF;
 	display: flex;
@@ -215,13 +217,13 @@ h2 {
 	width: 100%;
 }
 
-	.about_text {
+	#ab-text {
 		flex: 1;
 		float: left;
 		width: 50%;
 	}
 	
-		.about_header {
+		#ab-header {
 			align-items: center;
 			display: flex;
 			font-size: 45px;
@@ -229,7 +231,7 @@ h2 {
 			overflow: auto;
 		}
 		
-		.about_desc {
+		#ab-desc {
 			align-items: center;
 			display: flex;
 			margin-left: 7%;
@@ -242,13 +244,15 @@ h2 {
 			}
 			
 
-	.about_pic {
+	#ab-pic {
 		flex: 1;
 		align-items: center;
 		display: flex;
 		float: right;
 		justify-content: center;
 		width: 50%;
+		top: 50%;
+		transform: translateY(10%);
 	}
 
 			img[title="avatar"] {
@@ -262,7 +266,7 @@ h2 {
 * PROJECTS
 *********************************************************************************/
 
-.projects {
+#projects {
 	background-color: #D4D4D4;
 	color: #000000;
 	display: inline-block;
@@ -275,7 +279,7 @@ h2 {
 	width: 100vw;
 }
 
-	.projects_header {
+	#pr-header {
 		align-items: center;
 		display: flex;
 		font-size: 45px;
@@ -284,37 +288,37 @@ h2 {
 		width: 100%;
 	}
 
-	.descriptions {
+	#pr-desc-list {
 		display: flex;
 		overflow: auto;
 		margin-top: 1.5vh;
 		padding-bottom: 1%;
 		width: 100%;
 	}
-		.analytics_desc {
+		.pr-desc-item {
 			flex: 1;
+			overflow: auto;
+			width: 50;
+		}
+
+		#pr-analytics-desc {
 			margin-left: 3.5%;
 			margin-right: 1.75%;
-			overflow: auto;
-			width: 50%;
 		}
 		
-		.recommender_desc {
-			flex: 1;
+		#pr-recommender_desc {
 			margin-left: 1.75%;
 			margin-right: 3.5%;
-			overflow: auto;
-			width: 50%;
 		}
 		
-	.previews {
+	#pr-preview-list {
 		display: flex;
 		overflow: auto;
 		margin-top: 1.5vh;
 		width: 100%;
 	}
 	
-		.analytics_pic {
+		#pr-analytics-pic {
 			align-items: top;
 			display: flex;
 			flex: 1;
@@ -328,7 +332,7 @@ h2 {
 				width: 520px;
 			}
 		
-		.recommender_pic {
+		#pr-recommender-pic {
 			align-items: top;
 			display: flex;
 			flex: 1;
@@ -342,7 +346,7 @@ h2 {
 				width: 520px;
 			}
 			
-	.senior_design {
+	#pr-senior-design {
 		margin-left: 12.5%;
 		margin-right: 12.5%;
 		margin-top: 4vh;
@@ -358,15 +362,31 @@ h2 {
 			margin-left: 20%;
 			margin-right: 20%;
 			padding: 10px;
-		}	
+		}
+
+		#pr-nicomi-pic {
+			align-items: top;
+			display: flex;
+			flex: 1;
+			left: 50%;
+			transform: translateX(50%);
+			justify-content: center;
+			width: 50%;
+		}
+		
+			img[title="nicomi"] {
+				border: 0.5vh solid #F24D5A;
+				height: 351px;
+				width: 624px;
+			}
 
 /********************************************************************************* 
 * CONTACT
 *********************************************************************************/
 
-.contact {
+#contacts {
 	align-items: center;
-	background: linear-gradient(rgba(0, 0, 0, 1.00), rgba(0, 0, 0, 0.6)), url("MD_Landscape.jpg") center center fixed;
+	background: linear-gradient(rgba(0, 0, 0, 1.00), rgba(0, 0, 0, 0.6)), url("images/MD_Landscape.jpg") center center fixed;
 	color: #FFFFFF;
 	display: inline-block;
 	justify-content: center;
@@ -379,14 +399,14 @@ h2 {
 	width: 100%;
 }
 
-	.contact_header {
+	#cc-header {
 		align-items: center;
 		display: flex;
 		font-size: 40px;
 		justify-content: center;
 	}
 	
-	.contact_choices {
+	#cc-list {
 		align-items: center;
 		display: flex;
 		justify-content: center;
@@ -397,7 +417,7 @@ h2 {
 		width: 90%;
 	}
 	
-		.email {
+		#cc-email {
 			flex: 1;
 			margin: auto;
 			overflow: auto;
@@ -405,7 +425,7 @@ h2 {
 			width: 33.33%;
 		}
 		
-		.phone {
+		#cc-phone {
 			flex: 1;
 			margin: auto;
 			overflow: auto;
@@ -413,7 +433,7 @@ h2 {
 			width: 33.33%;
 		}
 		
-		.linkedin {
+		#cc-linkedin {
 			flex: 1;
 			margin: auto;
 			overflow: auto;
